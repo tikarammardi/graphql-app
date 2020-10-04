@@ -17,15 +17,15 @@ const UserType = new GraphQLObjectType({
     id: { type: GraphQLString },
     firstName: { type: GraphQLString },
     age: { type: GraphQLInt },
-    company: {
-      type: CompanyType,
-      async resolve(parentValue, args) {
-        const res = await axios.get(
-          `http://127.0.0.1:3000/company/${parentValue.id}`
-        );
-        return res.data;
-      },
-    },
+    // company: {
+    //   type: CompanyType,
+    //   async resolve(parentValue, args) {
+    //     const res = await axios.get(
+    //       `http://127.0.0.1:3000/company/${parentValue.id}`
+    //     );
+    //     return res.data;
+    //   },
+    // },
   },
 });
 
